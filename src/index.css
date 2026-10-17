@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #07080e;
+    --card-surface: #101320;
+    --card-surface-elevated: #161a2b;
+    --card-border: #1e243a;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --lovix-primary: #ff2a6d;
+    --lovix-primary-hover: #e01b5a;
+    --lovix-secondary: #05d9e8;
+    --lovix-accent-gold: #fbbf24;
+    --nav-bg: rgba(9, 11, 20, 0.94);
+  }
+
+  [data-theme='light'] {
+    --bg-main: #f8fafc;
+    --card-surface: #ffffff;
+    --card-surface-elevated: #f1f5f9;
+    --card-border: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --lovix-primary: #e11d48;
+    --lovix-primary-hover: #be123c;
+    --lovix-secondary: #0284c7;
+    --lovix-accent-gold: #d97706;
+    --nav-bg: rgba(255, 255, 255, 0.94);
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Google Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+/* Mobile-Only Dedicated Shell (Google Material / Mobile App Style) */
+.mobile-shell {
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bg-main);
+  box-shadow: 0 0 50px -15px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--card-border);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+[data-theme='light'] .mobile-shell {
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08), 0 0 0 1px #e2e8f0;
+}
+
+/* Crafted Gradients & Utilities */
+.lovix-gradient-text {
+  background: linear-gradient(135deg, var(--lovix-primary) 0%, #ff5e62 45%, var(--lovix-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lovix-primary-button {
+  background: linear-gradient(135deg, var(--lovix-primary) 0%, #ff5e62 100%);
+  color: #ffffff;
+}
+
+.lovix-gold-badge {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: #92400e;
+  border: 1px solid #fcd34d;
+}
+
+[data-theme='dark'] .lovix-gold-badge {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(217, 119, 6, 0.2) 100%);
+  color: #fcd34d;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.safe-bottom {
+  padding-bottom: calc(env(safe-area-inset-bottom, 16px) + 72px);
+}

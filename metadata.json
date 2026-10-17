@@ -1,0 +1,6 @@
+{
+  "name": "Lovix - Assistente de Rizz & Flerte",
+  "description": "Lovix: O assistente nº 1 de carisma, cantadas e respostas para conversas do Brasil com design profissional, checkout seguro e IA avançada.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "sub_1792182032961",
+    "transaction": "HP182032961",
+    "buyerEmail": "teste@lovix.ai",
+    "buyerName": "Usuário Lovix",
+    "planId": "yearly",
+    "status": "active",
+    "event": "PURCHASE_APPROVED",
+    "amount": 199.9,
+    "provider": "hotmart",
+    "hottokVerified": true,
+    "createdAt": "2026-10-16T20:20:32.961Z",
+    "updatedAt": "2026-10-16T20:20:32.961Z"
+  }
+]
